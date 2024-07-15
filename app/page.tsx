@@ -16,7 +16,7 @@ export default function Home() {
           <span className="hover:cursor-pointer font-bold underline underline-offset-[4px]">
             HARISH DHUNAKA
           </span>
-          . I&apos;m 20 y/o and I&apos;m a CS undegraduate student. I like
+          . I&apos;m 20 y/o and I&apos;m a CS undergraduate student. I like
           shuffling cards and building things. I enjoy web development and
           solving algoritmic puzzles and I live on the web.
         </div>
