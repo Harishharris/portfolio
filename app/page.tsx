@@ -21,7 +21,7 @@ export default function Home() {
           <p>Guntur, India</p>
         </div>
         <div className="leading-8 mt-4">
-          I&apos;m 20 y/o and I&apos;m a CS final year undegraduate student. I
+          I&apos;m 20 y/o and I&apos;m a CS final year undergraduate student. I
           like shuffling cards and building things. I enjoy web development and
           solving algoritmic puzzles and I live on the web.
         </div>
