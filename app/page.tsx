@@ -1,29 +1,35 @@
 'use client';
 
-import {
-  MapPin,
-  Github,
-  View,
-  X,
-  Linkedin,
-  MoveUpRight,
-  ArrowUpRight,
-} from 'lucide-react';
+import { MapPin, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <main className="bg-neutral-950 min-h-screen text-sm text-white flex pt-10 flex-col">
       <div className="flex items-start justify-start flex-col max-w-[600px] mx-auto">
-        <div className="font-semibold text-lg cursor-pointer mb-4">harish</div>
+        <div className="font-semibold text-lg cursor-pointer mb-4">
+          <div className="flex gap-4 items-center justify-center">
+            <div>
+              <Image
+                className="rounded-full ring-4 ring-purple-500"
+                src={'/Photo.jpg'}
+                height={42}
+                width={42}
+                alt="person"
+              />
+            </div>
+            <div className="text-2xl">harish</div>
+          </div>
+        </div>
         <div className="flex gap-2">
           <MapPin />
           <p>Guntur, India</p>
         </div>
         <div className="leading-8 mt-4">
-          I&apos;m 20 y/o and I&apos;m a CS final year undergraduate student. I
-          like shuffling cards and building things. I enjoy web development and
-          solving algoritmic puzzles and I live on the web.
+          I&apos;m a 20 y/o and I&apos;m a CS final year undergraduate student.
+          I like shuffling cards and building things. I enjoy web development
+          and solving algoritmic puzzles and I live on the web.
         </div>
 
         <div className="mt-8">
