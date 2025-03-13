@@ -1,135 +1,28 @@
 'use client';
 
-import { MapPin, ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { HeroSection } from '@/components/sections/hero';
+import { ProjectsSection } from '@/components/sections/projects';
+import { ContactSection } from '@/components/sections/contact';
 
 export default function Home() {
   return (
-    <main className="bg-neutral-950 min-h-screen text-sm text-white flex pt-10 flex-col">
-      <div className="flex items-start justify-start flex-col max-w-[600px] mx-auto">
-        <div className="font-semibold text-lg cursor-pointer mb-4">
-          <div className="flex gap-4 items-center justify-center">
-            <div>
-              <Image
-                className="rounded-full ring-4 ring-purple-500"
-                src={'/Photo.jpg'}
-                height={42}
-                width={42}
-                alt="person"
-              />
-            </div>
-            <div className="text-2xl">harish</div>
+    <main className="min-h-screen bg-[#0A0A0B] overflow-x-hidden">
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(63,13,128,0.15),rgba(0,0,0,0)_50%)]" />
+        <div className="absolute top-0 h-[500px] w-full bg-gradient-to-b from-blue-500/10 via-purple-500/10 to-transparent opacity-50 blur-3xl" />
+      </div>
+      <div className="relative">
+        <div className="h-screen flex flex-col justify-between pb-16">
+          <HeroSection />
+          <div className="px-6 sm:px-8 md:px-12 lg:px-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Featured Projects
+            </h2>
           </div>
         </div>
-        <div className="flex gap-2">
-          <MapPin />
-          <p>Guntur, India</p>
-        </div>
-        <div className="leading-8 mt-4">
-          I&apos;m a 20 y/o and I&apos;m a CS final year undergraduate student.
-          I like shuffling cards and building things. I enjoy web development
-          and solving algoritmic puzzles and I live on the web.
-        </div>
-
-        <div className="mt-8">
-          <h2 className="font-bold text-lg mb-8">projects</h2>
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <Link
-                target="_blank"
-                href={'https://testimonials-steel.vercel.app'}
-                className="underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-              >
-                testimonials
-              </Link>
-              <p className="mt-2 text-md text-neutral-100">
-                collect testimonials for your customers with ease
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <Link
-                target="_blank"
-                href={'https://github.com/Harishharris/course-platform'}
-                className="underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-              >
-                course-platform
-              </Link>
-              <p className="mt-2 text-md text-neutral-100">
-                teach your students about various technologies
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <Link
-                target="_blank"
-                href={'https://github.com/Harishharris/Hackathon'}
-                className="underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-              >
-                code-craftor
-              </Link>
-              <p className="mt-2 text-md text-neutral-100">
-                generate code using openAI
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <Link
-                target="_blank"
-                href={
-                  'https://blog-with-redux-284aj302e-harishharris.vercel.app'
-                }
-                className="underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-              >
-                blog
-              </Link>
-              <p className="mt-2 text-md text-neutral-100">
-                teach your students about various technologies
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <h2 className="font-bold text-lg my-8">links</h2>
-
-        <div className="flex gap-3">
-          <Link
-            href={'mailto:harish.16634@gmail.com'}
-            className="flex gap-1"
-            target="_blank"
-          >
-            email
-            <ArrowUpRight size={20} />
-          </Link>
-
-          <Link
-            href={'https://www.github.com/Harishharris'}
-            className="flex gap-1"
-            target="_blank"
-          >
-            github
-            <ArrowUpRight size={20} />
-          </Link>
-
-          <Link
-            href={'https://x.com/Harishdoge'}
-            className="flex gap-1"
-            target="_blank"
-          >
-            x.com
-            <ArrowUpRight size={20} />
-          </Link>
-
-          <Link
-            href={'https://www.linkedin.com/in/harish-dhunaka-a1a37024b/'}
-            className="flex gap-1"
-            target="_blank"
-          >
-            linkedin
-            <ArrowUpRight size={20} />
-          </Link>
-        </div>
+        <ProjectsSection />
+        <ContactSection />
       </div>
     </main>
   );
